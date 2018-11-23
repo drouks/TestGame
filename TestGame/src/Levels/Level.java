@@ -100,7 +100,7 @@ public class Level {
                 if (x * y % 10 < 7) {
                     tiles[x + y * width] = Tile.GRASS.getId();
                 } else {
-                    tiles[x + y * width] = Tile.GRASS.getId();
+                    tiles[x + y * width] = Tile.STONE.getId();
                 }
             }
         }
@@ -172,4 +172,8 @@ public class Level {
     	return this.player;
     }
     
+    public String getLevelName()
+    {
+    	return imagePath;
+    }
 }

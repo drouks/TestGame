@@ -26,7 +26,7 @@ public class Game extends Canvas implements Runnable {
 	public static final int WIDTH = 160;
 	public static final int HEIGHT = WIDTH/12*9;
 	public static final int SCALE = 3;
-	public static final String NAME = "Test Game";
+	public String NAME;
 	private BufferedImage img = new BufferedImage(WIDTH,HEIGHT,BufferedImage.TYPE_INT_RGB);
 	
 	private int[] pixels = ((DataBufferInt)img.getRaster().getDataBuffer()).getData();
@@ -96,6 +96,7 @@ public class Game extends Canvas implements Runnable {
 		handler = new InputHandler(this);
 		levelprogress = new LevelProgression();
 		level = levelprogress.levels.get(0);
+		NAME = level.getLevelName();
 		player = new Player(level,0,0,handler);
 		screen.setHealthOffset(player.getMaxhealth());
 		level.addEntity(player);
