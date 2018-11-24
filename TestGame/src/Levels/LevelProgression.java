@@ -24,12 +24,15 @@ public LevelProgression()
 	thirdlevel.addEntity(new LevelGoal(thirdlevel, 30,30));
 	Level fourthlevel = new Level("/levels/final_test_level.png",3);
 	fourthlevel.addEntity(new LevelGoal(fourthlevel,58,51));
+	Level fifthlevel = new Level("/levels/level_road_test.png",4);
+	fifthlevel.addEntity(new LevelGoal(fifthlevel,25,25));
 	this.levels.add(firstlevel);
 	this.levels.add(secondlevel);
 	this.levels.add(thirdlevel);
 	this.levels.add(fourthlevel);
+	this.levels.add(fifthlevel);
 	this.maxlevels = this.levels.size();
-	this.lastlevel = fourthlevel;
+	this.lastlevel = fifthlevel;
 
 }
 
